@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rover Interaction Page</title>
+    </head>
+    <body>
+        <h1>Rover Interaction Page</h1>
+        <form method="POST">
+            <label>Rover Command:</label><br>
+            <input name="action" style="width: 80%"><br>
+            <input type="submit" value="Send">
+        </form>
+        <h2>Rover Response:</h2>
+        {% for command in commands %}
+        <h3>{{ command }}</h3>
+        {% endfor %}
+    </body>
+</html>
